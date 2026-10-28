@@ -1,0 +1,139 @@
+{
+  "candidates": 2400,
+  "roles": 320,
+  "edges": 6142,
+  "total_capacity": 2039,
+  "t_greedy": 0.00031345700000429133,
+  "greedy_hires": 1709,
+  "t_hk_cold": 0.03952503099998239,
+  "hk_cold_hires": 1901,
+  "hk_cold_phases": 5,
+  "t_hk_warm": 0.035121048000007704,
+  "optimal_hires": 1901,
+  "greedy_gap": 192,
+  "warm_phases": 4,
+  "warm_phase_path_len": [
+    5,
+    7,
+    9,
+    11
+  ],
+  "augmenting_paths": 192,
+  "paths_len3": 0,
+  "paths_reassigning": 192,
+  "max_chain_len_edges": 11,
+  "candidates_moved": 251,
+  "berge_no_augmenting_path": true,
+  "min_cut_capacity": 1901,
+  "networkx_max_flow": 1901,
+  "ilp_hires": 1901,
+  "t_ilp": 0.1093396459999667,
+  "lp_hires": 1901,
+  "t_lp": 0.029575880999971105,
+  "scaling": [
+    {
+      "U": 1200,
+      "V": 160,
+      "E": 3053,
+      "hires": 938,
+      "t_hk": 0.012906679000025179,
+      "t_ilp": 0.04390873400001283
+    },
+    {
+      "U": 2400,
+      "V": 320,
+      "E": 6101,
+      "hires": 1856,
+      "t_hk": 0.030992400000002363,
+      "t_ilp": 0.0932222430000138
+    },
+    {
+      "U": 4800,
+      "V": 640,
+      "E": 12236,
+      "hires": 3619,
+      "t_hk": 0.08032831499997428,
+      "t_ilp": 0.26035744699998986
+    },
+    {
+      "U": 9600,
+      "V": 1280,
+      "E": 24732,
+      "hires": 7219,
+      "t_hk": 0.1793810140000005,
+      "t_ilp": 0.7338302879999787
+    }
+  ],
+  "example_traces": [
+    {
+      "edges": 11,
+      "steps": [
+        "C1173 takes R219",
+        "(C0540 vacates R219)",
+        "C0540 takes R300",
+        "(C0768 vacates R300)",
+        "C0768 takes R060",
+        "(C0700 vacates R060)",
+        "C0700 takes R277",
+        "(C2215 vacates R277)",
+        "C2215 takes R017"
+      ]
+    },
+    {
+      "edges": 11,
+      "steps": [
+        "C1260 takes R073",
+        "(C0011 vacates R073)",
+        "C0011 takes R306",
+        "(C0777 vacates R306)",
+        "C0777 takes R192",
+        "(C2043 vacates R192)",
+        "C2043 takes R221",
+        "(C1831 vacates R221)",
+        "C1831 takes R295"
+      ]
+    },
+    {
+      "edges": 11,
+      "steps": [
+        "C1280 takes R064",
+        "(C0714 vacates R064)",
+        "C0714 takes R261",
+        "(C0949 vacates R261)",
+        "C0949 takes R279",
+        "(C1412 vacates R279)",
+        "C1412 takes R171",
+        "(C1689 vacates R171)",
+        "C1689 takes R223"
+      ]
+    },
+    {
+      "edges": 11,
+      "steps": [
+        "C1398 takes R120",
+        "(C0061 vacates R120)",
+        "C0061 takes R258",
+        "(C0675 vacates R258)",
+        "C0675 takes R091",
+        "(C0767 vacates R091)",
+        "C0767 takes R312",
+        "(C0223 vacates R312)",
+        "C0223 takes R057"
+      ]
+    },
+    {
+      "edges": 11,
+      "steps": [
+        "C1866 takes R196",
+        "(C1094 vacates R196)",
+        "C1094 takes R220",
+        "(C1332 vacates R220)",
+        "C1332 takes R308",
+        "(C2398 vacates R308)",
+        "C2398 takes R260",
+        "(C1661 vacates R260)",
+        "C1661 takes R202"
+      ]
+    }
+  ]
+}

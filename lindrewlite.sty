@@ -1,0 +1,37 @@
+% lindrewlite.sty -- a lightweight stand-in for Andrew Lin-style lecture notes:
+% coloured boxes for definitions / theorems / examples / remarks, clean headings.
+% To use the real package instead, replace \usepackage{lindrewlite} by \usepackage{lindrew}.
+\ProvidesPackage{lindrewlite}[2026/10/28 Lin-style notes (stand-in)]
+\RequirePackage{fontspec}
+\RequirePackage[margin=1.05in]{geometry}
+\RequirePackage{amsmath,amssymb,amsthm,mathtools}
+\RequirePackage{microtype,enumitem,booktabs,graphicx,xcolor}
+\RequirePackage{tikz}\usetikzlibrary{arrows.meta,positioning,calc}
+\RequirePackage[most]{tcolorbox}
+\RequirePackage{listings}
+\RequirePackage[colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\RequirePackage{titlesec}
+
+\definecolor{lin-blue}{HTML}{2B59A6}
+\definecolor{lin-green}{HTML}{2E7D4F}
+\definecolor{lin-red}{HTML}{B03A2E}
+\definecolor{lin-gold}{HTML}{B7791F}
+\definecolor{lin-gray}{HTML}{F4F4F4}
+
+\titleformat{\section}{\Large\bfseries\color{lin-blue}}{\thesection}{0.6em}{}[\vspace{-0.6em}\color{lin-blue}\rule{\linewidth}{0.6pt}]
+\titleformat{\subsection}{\large\bfseries\color{lin-blue!80!black}}{\thesubsection}{0.6em}{}
+\setlength{\parindent}{0pt}\setlength{\parskip}{0.6em}
+
+\newtcbtheorem[number within=section]{definition}{Definition}{enhanced,breakable,colback=lin-blue!6,colframe=lin-blue,fonttitle=\bfseries,left=6pt,right=6pt}{def}
+\newtcbtheorem[use counter from=definition]{theorem}{Theorem}{enhanced,breakable,colback=lin-red!5,colframe=lin-red,fonttitle=\bfseries,left=6pt,right=6pt}{thm}
+\newtcbtheorem[use counter from=definition]{lemma}{Lemma}{enhanced,breakable,colback=lin-red!5,colframe=lin-red,fonttitle=\bfseries,left=6pt,right=6pt}{lem}
+\newtcbtheorem[use counter from=definition]{example}{Example}{enhanced,breakable,colback=lin-green!6,colframe=lin-green,fonttitle=\bfseries,left=6pt,right=6pt}{ex}
+\newtcolorbox{plain}{enhanced,breakable,colback=lin-gold!10,colframe=lin-gold,title={In plain words},fonttitle=\bfseries,left=6pt,right=6pt}
+\newtcolorbox{remark}{enhanced,breakable,colback=lin-gray,colframe=black!45,title={Remark},fonttitle=\bfseries,left=6pt,right=6pt}
+\newtcolorbox{keyidea}{enhanced,breakable,colback=lin-blue!12,colframe=lin-blue,title={Key idea},fonttitle=\bfseries,left=6pt,right=6pt}
+
+\lstset{language=Python,basicstyle=\ttfamily\footnotesize,keywordstyle=\color{lin-blue}\bfseries,
+ commentstyle=\color{lin-green}\itshape,stringstyle=\color{lin-red},frame=single,
+ backgroundcolor=\color{lin-gray},breaklines=true,showstringspaces=false,columns=fullflexible,
+ xleftmargin=4pt,xrightmargin=4pt,aboveskip=0.8em,belowskip=0.4em}
+\newcommand{\code}[1]{\texttt{#1}}
